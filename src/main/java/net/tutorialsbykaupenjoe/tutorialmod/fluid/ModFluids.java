@@ -6,7 +6,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.fluid.FlowingFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fluids.FluidAttributes;
@@ -25,23 +24,21 @@ public class ModFluids {
 
     public static final DeferredRegister<Fluid> FLUIDS
             = DeferredRegister.create(ForgeRegistries.FLUIDS, TutorialMod.MOD_ID);
-
-
+    
     public static final RegistryObject<FlowingFluid> OIL_FLUID
             = FLUIDS.register("oil_fluid", () -> new ForgeFlowingFluid.Source(ModFluids.OIL_PROPERTIES));
 
     public static final RegistryObject<FlowingFluid> OIL_FLOWING
             = FLUIDS.register("oil_flowing", () -> new ForgeFlowingFluid.Flowing(ModFluids.OIL_PROPERTIES));
 
-
     public static final ForgeFlowingFluid.Properties OIL_PROPERTIES = new ForgeFlowingFluid.Properties(
-            () -> OIL_FLUID.get(), () -> OIL_FLOWING.get(), FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL)
+            OIL_FLUID, OIL_FLOWING, FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL)
             .density(15).luminosity(2).viscosity(5).sound(SoundEvents.ITEM_HONEY_BOTTLE_DRINK).overlay(WATER_OVERLAY_RL)
             .color(0xbffed0d0)).slopeFindDistance(2).levelDecreasePerBlock(2)
-            .block(() -> ModFluids.OIL_BLOCK.get()).bucket(() -> ModItems.OIL_BUCKET.get());
+            .block(ModFluids.OIL_BLOCK).bucket(ModItems.OIL_BUCKET);
 
     public static final RegistryObject<FlowingFluidBlock> OIL_BLOCK = ModBlocks.BLOCKS.register("oil",
-            () -> new FlowingFluidBlock(() -> ModFluids.OIL_FLUID.get(), AbstractBlock.Properties.create(Material.WATER)
+            () -> new FlowingFluidBlock(ModFluids.OIL_FLUID, AbstractBlock.Properties.create(Material.WATER)
                     .doesNotBlockMovement().hardnessAndResistance(100f).noDrops()));
 
     public static void register(IEventBus eventBus) {

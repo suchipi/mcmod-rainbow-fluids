@@ -1,15 +1,12 @@
 package net.tutorialsbykaupenjoe.tutorialmod.item;
 
-import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.tutorialsbykaupenjoe.tutorialmod.TutorialMod;
-import net.tutorialsbykaupenjoe.tutorialmod.block.ModBlocks;
 import net.tutorialsbykaupenjoe.tutorialmod.fluid.ModFluids;
-import net.tutorialsbykaupenjoe.tutorialmod.item.custom.Firestone;
 
 public class ModItems {
 
@@ -17,68 +14,9 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
 
 
-    public static final RegistryObject<Item> AMETHYST = ITEMS.register("amethyst",
-            () -> new Item(new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
-
-    public static final RegistryObject<Item> FIRESTONE = ITEMS.register("firestone",
-            () -> new Firestone(new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP).maxDamage(8)));
-
-
-    public static final RegistryObject<Item> AMETHYST_SWORD = ITEMS.register("amethyst_sword",
-            () -> new SwordItem(ModItemTier.AMETHYST, 2, 3f,
-                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
-
-    public static final RegistryObject<Item> AMETHYST_PICKAXE = ITEMS.register("amethyst_pickaxe",
-            () -> new PickaxeItem(ModItemTier.AMETHYST, 0, -1f,
-                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
-
-    public static final RegistryObject<Item> AMETHYST_SHOVEL = ITEMS.register("amethyst_shovel",
-            () -> new ShovelItem(ModItemTier.AMETHYST, 0, -1f,
-                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
-
-    public static final RegistryObject<Item> AMETHYST_AXE = ITEMS.register("amethyst_axe",
-            () -> new AxeItem(ModItemTier.AMETHYST, 4, -6f,
-                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
-
-    public static final RegistryObject<Item> AMETHYST_HOE = ITEMS.register("amethyst_hoe",
-            () -> new HoeItem(ModItemTier.AMETHYST, 0, 0f,
-                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
-
-
-    public static final RegistryObject<Item> AMETHYST_BOOTS = ITEMS.register("amethyst_boots",
-            () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.FEET,
-                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
-
-    public static final RegistryObject<Item> AMETHYST_CHESTPLATE = ITEMS.register("amethyst_chestplate",
-            () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.CHEST,
-                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
-
-    public static final RegistryObject<Item> AMETHYST_LEGGINGS = ITEMS.register("amethyst_leggings",
-            () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.LEGS,
-                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
-
-    public static final RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet",
-            () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD,
-                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
-
-
-    public static final RegistryObject<Item> OATS = ITEMS.register("oats",
-            () -> new BlockItem(ModBlocks.OATS.get(), new Item.Properties()
-                    .food(new Food.Builder().hunger(1).saturation(0.1f).fastToEat().build())
-                    .group(ModItemGroup.TUTORIAL_GROUP)));
-
-    public static final RegistryObject<Item> AMETHYST_HORSE_ARMOR = ITEMS.register("amethyst_horse_armor",
-            () -> new HorseArmorItem(9, "amethyst",
-                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
-
-    public static final RegistryObject<Item> REDWOOD_SIGN = ITEMS.register("redwood_sign",
-            () -> new SignItem(new Item.Properties().maxStackSize(16).group(ModItemGroup.TUTORIAL_GROUP),
-                    ModBlocks.REDWOOD_SIGN.get(), ModBlocks.REDWOOD_WALL_SIGN.get()));
-
-
     public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket",
-            () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(),
-                    new Item.Properties().maxStackSize(1).group(ModItemGroup.TUTORIAL_GROUP)));
+            () -> new BucketItem(ModFluids.OIL_FLUID,
+                    new Item.Properties().maxStackSize(1)));
 
 
 

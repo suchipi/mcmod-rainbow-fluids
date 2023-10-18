@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:iron_ore"
+      "item": "minecraft:water_bucket"
     },
     {
-      "item": "tutorialmod:firestone"
+      "item": "minecraft:black_dye"
     }
   ],
   "result": {
-    "item": "minecraft:iron_ingot"
+    "item": "tutorialmod:oil_bucket"
   }
 }
