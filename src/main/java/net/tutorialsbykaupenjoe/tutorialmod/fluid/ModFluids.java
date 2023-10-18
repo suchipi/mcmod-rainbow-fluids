@@ -32,13 +32,13 @@ public class ModFluids {
             = FLUIDS.register("oil_flowing", () -> new ForgeFlowingFluid.Flowing(ModFluids.OIL_PROPERTIES));
 
     public static final ForgeFlowingFluid.Properties OIL_PROPERTIES = new ForgeFlowingFluid.Properties(
-            OIL_FLUID, OIL_FLOWING, FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL)
+            () -> OIL_FLUID.get(), () -> OIL_FLOWING.get(), FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL)
             .density(15).luminosity(2).viscosity(5).sound(SoundEvents.ITEM_HONEY_BOTTLE_DRINK).overlay(WATER_OVERLAY_RL)
             .color(0xbffed0d0)).slopeFindDistance(2).levelDecreasePerBlock(2)
-            .block(ModFluids.OIL_BLOCK).bucket(ModItems.OIL_BUCKET);
+            .block(() -> ModFluids.OIL_BLOCK.get()).bucket(() -> ModItems.OIL_BUCKET.get());
 
     public static final RegistryObject<FlowingFluidBlock> OIL_BLOCK = ModBlocks.BLOCKS.register("oil",
-            () -> new FlowingFluidBlock(ModFluids.OIL_FLUID, AbstractBlock.Properties.create(Material.WATER)
+            () -> new FlowingFluidBlock(() -> ModFluids.OIL_FLUID.get(), AbstractBlock.Properties.create(Material.WATER)
                     .doesNotBlockMovement().hardnessAndResistance(100f).noDrops()));
 
     public static void register(IEventBus eventBus) {
