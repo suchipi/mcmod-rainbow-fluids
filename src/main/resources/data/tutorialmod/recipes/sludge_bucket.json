@@ -5,10 +5,10 @@
       "item": "minecraft:water_bucket"
     },
     {
-      "item": "minecraft:black_dye"
+      "item": "minecraft:lime_dye"
     }
   ],
   "result": {
-    "item": "tutorialmod:oil_bucket"
+    "item": "tutorialmod:sludge_bucket"
   }
 }

@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tutorialmod:oil_flowing",
-    "tutorialmod:oil_fluid"
+    "tutorialmod:sludge_flowing",
+    "tutorialmod:sludge_fluid"
   ]
 }

@@ -14,8 +14,8 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
 
 
-    public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket",
-            () -> new BucketItem(ModFluids.OIL_FLUID,
+    public static final RegistryObject<Item> SLUDGE_BUCKET = ITEMS.register("sludge_bucket",
+            () -> new BucketItem(ModFluids.SLUDGE_FLUID,
                     new Item.Properties().maxStackSize(1)));
 
 
