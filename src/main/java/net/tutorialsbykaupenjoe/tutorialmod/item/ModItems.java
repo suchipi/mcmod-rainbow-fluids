@@ -10,18 +10,13 @@ import net.tutorialsbykaupenjoe.tutorialmod.fluid.ModFluids;
 
 public class ModItems {
 
-    public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
+  public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
 
+  public static final RegistryObject<Item> SLUDGE_BUCKET = ITEMS.register("sludge_bucket",
+      () -> new BucketItem(ModFluids.SLUDGE_FLUID,
+          new Item.Properties().maxStackSize(1)));
 
-    public static final RegistryObject<Item> SLUDGE_BUCKET = ITEMS.register("sludge_bucket",
-            () -> new BucketItem(ModFluids.SLUDGE_FLUID,
-                    new Item.Properties().maxStackSize(1)));
-
-
-
-
-    public static void register(IEventBus eventBus) {
-        ITEMS.register(eventBus);
-    }
+  public static void register(IEventBus eventBus) {
+    ITEMS.register(eventBus);
+  }
 }

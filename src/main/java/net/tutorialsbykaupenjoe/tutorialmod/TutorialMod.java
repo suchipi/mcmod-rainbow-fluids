@@ -16,27 +16,27 @@ import org.apache.logging.log4j.Logger;
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(TutorialMod.MOD_ID)
 public class TutorialMod {
-    public static final String MOD_ID = "tutorialmod";
+  public static final String MOD_ID = "tutorialmod";
 
-    private static final Logger LOGGER = LogManager.getLogger();
+  private static final Logger LOGGER = LogManager.getLogger();
 
-    public TutorialMod() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+  public TutorialMod() {
+    IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register(eventBus);
-        ModBlocks.register(eventBus);
-        ModFluids.register(eventBus);
+    ModItems.register(eventBus);
+    ModBlocks.register(eventBus);
+    ModFluids.register(eventBus);
 
-        eventBus.addListener(this::clientSetup);
+    eventBus.addListener(this::clientSetup);
 
-        MinecraftForge.EVENT_BUS.register(this);
-    }
+    MinecraftForge.EVENT_BUS.register(this);
+  }
 
-    private void clientSetup(final FMLClientSetupEvent event) {
-        event.enqueueWork(() -> {
-            RenderTypeLookup.setRenderLayer(ModFluids.SLUDGE_FLUID.get(), RenderType.getTranslucent());
-            RenderTypeLookup.setRenderLayer(ModFluids.SLUDGE_BLOCK.get(), RenderType.getTranslucent());
-            RenderTypeLookup.setRenderLayer(ModFluids.SLUDGE_FLOWING.get(), RenderType.getTranslucent());
-        });
-    }
+  private void clientSetup(final FMLClientSetupEvent event) {
+    event.enqueueWork(() -> {
+      RenderTypeLookup.setRenderLayer(ModFluids.SLUDGE_FLUID.get(), RenderType.getTranslucent());
+      RenderTypeLookup.setRenderLayer(ModFluids.SLUDGE_BLOCK.get(), RenderType.getTranslucent());
+      RenderTypeLookup.setRenderLayer(ModFluids.SLUDGE_FLOWING.get(), RenderType.getTranslucent());
+    });
+  }
 }
