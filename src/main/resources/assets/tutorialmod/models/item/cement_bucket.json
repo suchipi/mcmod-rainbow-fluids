@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tutorialmod:item/smoothie_bucket"
+    "layer0": "tutorialmod:item/cement_bucket"
   }
 }
