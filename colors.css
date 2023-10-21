@@ -1,18 +1,18 @@
-.bla {
-  --White: #F9FFFE;
-  --Light-gray: #9D9D97;
-  --Gray: #474F52;
-  --Black: #1D1D21;
-  --Brown: #835432;
-  --Red: #B02E26;
-  --Orange: #F9801D;
-  --Yellow: #FED83D;
-  --Lime: #80C71F;
-  --Green: #5E7C16;
-  --Cyan: #169C9C;
-  --Light-blue: #3AB3DA;
-  --Blue: #3C44AA;
-  --Purple: #8932B8;
-  --Magenta: #C74EBD;
-  --Pink: #F38BAA;
+.dye-colors {
+  --White: #F9FFFE; /* milk 2 */
+  --Light-gray: #9D9D97; /* nutrient paste */
+  --Gray: #474F52; /* goop */
+  --Black: #1D1D21; /* oil */
+  --Brown: #835432; /* muddy water */
+  --Red: #B02E26; /* blood */
+  --Orange: #F9801D; /* sunny "c" */
+  --Yellow: #FED83D; /* piss */
+  --Lime: #80C71F; /* sludge */
+  --Green: #5E7C16; /* smoothie */
+  --Cyan: #169C9C; /* slurpee */
+  --Light-blue: #3AB3DA; /* blue raspberry juice */
+  --Blue: #3C44AA; /* liquid ice */
+  --Purple: #8932B8; /* lean */
+  --Magenta: #C74EBD; /* printer ink */
+  --Pink: #F38BAA; /* antifreeze */
 }

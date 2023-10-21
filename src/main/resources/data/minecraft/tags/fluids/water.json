@@ -1,7 +1,37 @@
 {
   "replace": false,
   "values": [
+    "tutorialmod:milk_2_flowing",
+    "tutorialmod:milk_2_fluid",
+    "tutorialmod:nutrient_paste_flowing",
+    "tutorialmod:nutrient_paste_fluid",
+    "tutorialmod:goop_flowing",
+    "tutorialmod:goop_fluid",
+    "tutorialmod:oil_flowing",
+    "tutorialmod:oil_fluid",
+    "tutorialmod:muddy_water_flowing",
+    "tutorialmod:muddy_water_fluid",
+    "tutorialmod:blood_flowing",
+    "tutorialmod:blood_fluid",
+    "tutorialmod:sunny_c_flowing",
+    "tutorialmod:sunny_c_fluid",
+    "tutorialmod:piss_flowing",
+    "tutorialmod:piss_fluid",
     "tutorialmod:sludge_flowing",
-    "tutorialmod:sludge_fluid"
+    "tutorialmod:sludge_fluid",
+    "tutorialmod:smoothie_flowing",
+    "tutorialmod:smoothie_fluid",
+    "tutorialmod:slurpee_flowing",
+    "tutorialmod:slurpee_fluid",
+    "tutorialmod:blue_raspberry_juice_flowing",
+    "tutorialmod:blue_raspberry_juice_fluid",
+    "tutorialmod:liquid_ice_flowing",
+    "tutorialmod:liquid_ice_fluid",
+    "tutorialmod:lean_flowing",
+    "tutorialmod:lean_fluid",
+    "tutorialmod:printer_ink_flowing",
+    "tutorialmod:printer_ink_fluid",
+    "tutorialmod:antifreeze_flowing",
+    "tutorialmod:antifreeze_fluid"
   ]
 }
