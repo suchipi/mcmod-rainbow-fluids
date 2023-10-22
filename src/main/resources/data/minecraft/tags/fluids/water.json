@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "minecraft:water",
     "rainbowfluids:milk_2_flowing",
     "rainbowfluids:milk_2_fluid",
     "rainbowfluids:cement_flowing",
