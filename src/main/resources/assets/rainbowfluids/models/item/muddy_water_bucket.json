@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "rainbowfluids:item/muddy_water_bucket"
+  }
+}
